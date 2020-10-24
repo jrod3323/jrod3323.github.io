@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Inject CSS reset and My Css -->
+    <link rel="stylesheet" href="./Assets/reset.css" />
+    <link rel="stylesheet" href="./Assets/style.css" />
+    <title>Jared Ackley Portfolio</title>
+<!-- JS for quote slideshow after Nav Bar -->
+    <script>
+        // showSlides(slideIndex);
+        slideIndex = 1;
+        setTimeout(function(){
+            showSlides(1)
+        }, 100);
+
+        setInterval(function(){
+            slideIndex = (slideIndex+1)
+            showSlides(slideIndex)
+        },3000); 
+
+        function plusSlides(n) {
+          showSlides(n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if(n === slides.length+1){n=1}
+          for (i = 0; i < slides.length; i++) {
+              console.log(n);
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[n-1].style.display = "block";  
+          dots[n-1].className += " active";
+        }
+    </script>
+
+</head>
+<!-- Header of page contains My Name and Pic of Me -->
+<body class="bg">
+    <header>
+        
+        <h1>Jared Ackley</h1>
+
+        <figure><img class="myPic" src="./Assets/images/mypicture.png" alt="Picture of Me"></figure>
+
+    </header>
+<!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li> <a class="navAnchor" href="#aboutMe">About Me</a></li>
+            <li> <a class="navAnchor" href="#myPortfolio">My Portfolio</a></li>
+            <li> <a class="navAnchor" href="#myResume">My Resume</a></li>
+            <li> <a class="navAnchor" href="#contactMe">Contact Me</a></li>
+
+        </ul>
+    </nav>
+<!-- Quote Slide Show -->
+    <section class="slideshow-container">
+          <div class="mySlides">
+            <q>"We have to continually be jumping off cliffs and developing our wings on the way down."</q>
+            <p class="author">- Kurt Vonnegut</p>
+          </div>
+          
+          <div class="mySlides">
+            <q>"Others have seen what is and asked why. I have seen what could be and asked why not."</q>
+            <p class="author">- Pablo Picasso</p>
+          </div>
+          
+          <div class="mySlides">
+            <q>"Imagination is everything. It is the preview of life's coming attractions."</q>
+            <p class="author">- Albert Einstein</p>
+          </div>
+
+          <div class="mySlides">
+            <q>"Creativity takes courage."</q>
+            <p class="author">Henry Matisse</p>
+          </div>
+
+          <div class="mySlides">
+            <q>"I never made one of my discoveries through the process of rational thinking."</q>
+            <p class="author">Albert Einstein</p>
+          </div>
+    </section>
+
+    <section class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </section>
+<!-- beginning of main section -->
+    <main>
+        <!-- About Me Section -->
+            <section id="aboutMe">
+                <h2>About Me</h2>
+                <p>
+                    I have been in the transplant industry since 2011. My career started at Indiana Donor Network (IDN) in 2011 as an Organ 
+                    Procurement Coordinator. During my time at IDN, I managed all aspects of the organ procurement process. I also served on 
+                    several committees and worked closely with the clinical manager to develop antibiotic and lung therapy protocols. In 2013 
+                    I accepted a position with Buckeye Transplant Services (BTS) as an import coordinator where I closely work with transplant 
+                    centers to evaluate organs and help facilitate the organ transplant process. As the company has grown, I have grown with it. 
+                    I was promoted in 2015 to a Lead Coordinator, from there I was promoted to Clinical Support Manager. 
+                    Buckeye Transplant is a unique company in healthcare and has given me a unique opportunity to learn many aspects of growing a 
+                    company. After my time as a Clinical Support Manager, I transitioned into a HR Compliance Manager role where I helped Buckeye 
+                    with the employee onboarding process and helped ensure compliance with all labor laws across all 50 states. While wearing many 
+                    hats at Buckeye Transplant I became interested in how technology could help streamline and standardize our many processes. To 
+                    help Buckeye Transplant grow, I transitioned into an IT Project Manager role to develop tools and applications to streamline 
+                    and standardized our processes company wide. I am a highly motivated employee skilled in Customer Service, Interpersonal 
+                    Skills, Management, Process Management, and Healthcare. 
+                </p>
+            </section>
+
+            <!-- My Portfolio section - links to completed projects -->
+            <section id="myPortfolio">
+                <h2>My Portfolio</h2>
+                <figure class="portfolioMainBlock">
+                    <a class="project" target="_blank" href="./pages/inprogress.html">
+                        <figure>
+                            <h3>Project 1</h3>
+                        </figure>
+                    </a>
+
+                    <a class="project" target="_blank" href="./pages/inprogress.html">
+                        <figure>
+                            <h3>Project 2</h3>
+                        </figure>
+                    </a>
+
+                    <a class="project" target="_blank" href="./pages/inprogress.html">
+                        <figure>
+                            <h3>Project 3</h3>
+                        </figure>
+                    </a>
+
+                    <a class="project" target="_blank" href="./pages/inprogress.html">
+                        <figure>
+                            <h3>Project 4</h3>
+                        </figure>
+                    </a>
+
+                    <a class="project" target="_blank" href="./pages/inprogress.html">
+                        <figure>
+                            <h3>Project 5</h3>
+                        </figure>
+                    </a>
+
+                    <a class="project" target="_blank" href="./pages/inprogress.html">
+                        <figure>
+                            <h3>Project 6</h3>
+                        </figure>
+                    </a>
+
+                </figure>  
+            </section>
+
+            <!-- My Resume Section - Goes Through work experience , education and certifications -->
+            <section id="myResume">
+                <h2>My Resume</h2>
+                <ul class="resumeMainBlock">
+                    <li>
+                       <h3> Work Experience</h3>
+                        <ul>
+                            <li>Buckeye Transplant Services - IT Project Manager</li>
+                            <li>Full Time Oct 2019 - Present</li>
+                            <p>
+                                Develops IT tools as directed by HR Compliance Officer to aid all departments with process standardization and 
+                                automation. Review processes from all divisions of company and create tools and programs to automate and 
+                                streamline processes to improve overall work-flow. Develop and maintain company wide IT policies. Collaborate with 
+                                Buckeye Transplant application manager for all changes and updates to program. Maintains all currently developed 
+                                tools to ensure everything is in working order and maintained. Available to all Buckeye coordinators to help and 
+                                troubleshoot with any IT issues. Continually develops programming and development skills with the use of online 
+                                education.
+                            </p>
+                        </ul>
+
+                        <ul>
+                            <li>Buckeye Transplant Services - Human Resources Compliance Manager</li>
+                            <li>Jan 2019 – Nov 2019</li>
+                            <p>
+                                Maintained an internet presence to help Buckeye Transplant recruit highly qualified individuals. Worked with the 
+                                clinical staff to assess and fill needs. Help HR Director execute new hire’s initial employment paperwork. 
+                                (i.e Employee Handbook, Arbitration Agreement, Non-Solicitation Agreement, Non-Disclosure Agreement, Device 
+                                Management Agreement, I-9 and W-4 Federal Tax Forms). Developed and maintained accurate HR records for each 
+                                Buckeye employee. (i.e background checks, drug screens, employee federal tax documents, and initial HIPAA training 
+                                certifications). Developed and completed initial on boarding training process. Requested and maintained all access 
+                                for employees with all of our transplant partners. Ensured that Buckeye Transplant stayed compliant with all state 
+                                and federal regulations. With a focus on continual company improvements.
+                            </p>
+                        </ul>
+
+                        <ul>
+                            <li>Buckeye Transplant Services - Clinical Support Manager</li>
+                            <li>Oct 2017 – Jan 2019</li>
+                            <p>
+                                Demonstrated a comprehensive knowledge of UNOS Policy regarding organ evaluation, allocation, and surgical 
+                                recovery and critical care management of the brain dead organ donor. Maintained the highest standards of 
+                                professionalism, integrity and ethics modeling a standard of civility and excellence. Updated transplant center 
+                                flow processes, DALS, contacts with any changes asap and ensured all coordinators on the contract and the Clinical 
+                                Resource Manager were updated on all modifications in real time. Provided coordinator evaluations. Collaborated 
+                                with Quality manager to ensure compliance, assess competency, address deficits and develop processes to proactively 
+                                prevent errors. Effectively lead and supervised coordinators to achieve set targets. Provided positive leadership 
+                                to motivate professional growth and development of coordinators.
+                            </p>
+                        </ul>
+
+                        <ul>
+                            <li>Buckeye Transplant Services - Lead Coordinator</li>
+                            <li>Oct 2015 – Oct 2017</li>
+                            <p>
+                                Demonstrated a comprehensive knowledge of UNOS Policy regarding organ evaluation, allocation, and surgical 
+                                recovery and critical care management of the brain dead organ donor. Maintained the highest standards of 
+                                professionalism, integrity and ethics modeling a standard of civility and excellence. Updated transplant center 
+                                flow processes, DALS, contacts with any changes asap and ensured all coordinators on the contract. Helped train 
+                                new coordinators to current processes.
+                            </p>
+                        </ul>
+
+                        <ul>
+                            <li>Buckeye Transplant Services - Import Transplant Coordinator</li>
+                            <li>Jul 2013 – Oct 2015</li>
+                        </ul>
+
+                        <ul>
+                            <li>Indiana Donor Network - Procurement Transplant Coordinator</li>
+                            <li>Aug 2011 – June 2013</li>
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <h3>Certifictions</h3>
+                        <ul class="certifications">
+                            <li> <a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/5LS678FNQXSP"> University of Michigan - Introduction to Structured Query Language - Issued May 2020</a></li>
+                            <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/QQZFUQ88GQUN"> University of Michigan - Building Web Applications in PHP - Issued April 2020</a></li>
+                            <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/89W6U3XQPLN5"> Google - Gsuite Administration Specialization - Issued Feb 2020</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h3>Education</h3>
+                        <ul class="education">
+                            <li>University of Texas at Austin - Full Stack Web Development Coding Bootcamp - 2020-2021</li>
+                            <li>University of Toledo - Master of Biomedical Sciences, Human Donation Science - 2010-2011</li>
+                            <li>University of Toledo - Bachelor of Science, Pharmaceutical Sciences - 2005-2010</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- My Contact Section -->
+            <section id="contactMe">
+                <h2>Contact Me</h2>
+                <ul>
+                    <li>Email: jrod3323@gmail.com </li>
+                    <li>Contact: 419-584-6006</li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/jared-ackley-438364124/">LinkedIn</a></li>
+                </ul>
+            </section>
+
+    </main>
+
+    <!-- Bottom Nav Bar -->
+    <nav>
+        <ul>
+            <li> <a class="navAnchor" href="#aboutMe">About Me</a></li>
+            <li> <a class="navAnchor" href="#myPortfolio">My Portfolio</a></li>
+            <li> <a class="navAnchor" href="#myResume">My Resume</a></li>
+            <li> <a class="navAnchor" href="#contactMe">Contact Me</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Fooder which includes links to image resources -->
+    <footer>
+
+        <p class="resList">
+            Outside Image Resources
+            <ul>
+                <li class="resource">Background<span class="backgroundRes"><a target="_blank" href="https://hipwallpaper.com/night-sky-backgrounds-hd/">Click Here for the Original Image</a></span></li> 
+                <li class="resource">In Progress Project Cogs<span class="backgroundRes"><a target="_blank" href="https://giphy.com/gifs/static-cogs-stempunk-26tPp6Np4SW7NVJuw">Click Here for the Original Image</a></span></li> 
+                <li class="resource">In Progress Page Minions<span class="backgroundRes"><a target="_blank" href="https://tenor.com/view/minions-gif-3533584">Click Here for the Original Image</a></span></li> 
+
+
+            </ul>
+        </p>
+
+    </footer>
+
+</body>
+</html>

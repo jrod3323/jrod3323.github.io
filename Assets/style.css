@@ -1,0 +1,412 @@
+/* Variables for injection */
+:root {
+    --fontColor: white;
+    --backgroundColor:white;
+    --highlightColor:grey;
+    --fontStyle: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --borderColor: white;
+}
+
+/* Main full page CSS */
+html{
+    font-size: 62.5%;
+    font-family: var(--fontStyle);
+}
+.bg{
+    background-image: url(./images/background.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Main CSS */
+header {
+    position: relative;
+    display: flex;
+    height: 20rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a{
+    color: var(--fontColor)
+}
+
+header h1{
+    position: absolute;
+    left: 10%;
+    bottom: 20%
+}
+
+header figure{
+    position: absolute;
+    right: 10%;
+}
+
+.myPic{
+    height: 150px;
+    width: 175px;
+    border-radius: 50%;
+}
+
+nav {
+    border-style: solid;
+    color: black; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem; 
+}
+
+.navAnchor {
+    color:black;
+    text-decoration: none;
+}
+nav ul li {
+    border-style: solid;
+    border-color: var(--fontColor);
+    width: 25%;
+    border-width: .1rem;
+    border-radius: 2.5rem;
+    text-align: center;
+    background: var(--backgroundColor);
+    margin: .2rem;
+}
+
+nav ul li:hover{
+    background-color:var(--highlightColor);
+    border-color: var(--highlightColor);
+}
+
+
+#banner {
+    height: 200px;
+    width: 100%;
+}
+
+h2{
+    font-size: 3rem;
+    text-align: center;
+    width: 15%;
+    justify-content: center;
+}
+
+main section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+    color: var(--fontColor)
+}
+
+#aboutMe p{
+    width: 85%;
+    border-left: var(--borderColor);
+    border-style: solid;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+
+/* Portfolio section CSS */
+
+#myPortfolio {
+    position: relative;
+
+}
+
+.portfolioMainBlock {
+    width: 85%;
+    border-left: var(--borderColor);
+    border-style: solid;
+    padding: 1rem;
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project {
+    background-image: url(./images/cogs.gif);
+    width: 25%;
+    height: 150px;
+    padding: 1rem;
+    margin: 2rem;
+    font-size: 2rem;
+    border-radius: 5%;
+    z-index: 0;
+}
+
+.project:hover{
+    
+    width: 25%;
+    height: 250px;
+    z-index: 2;
+    transition: 1s;
+}
+
+
+.project figure h3 {
+    position: absolute;
+    border-style: ridge;
+    border-color: var(--borderColor);
+    border-width: .5rem;
+    padding: .1rem;
+    border-radius: 5%;
+}
+
+/* Resume section CSS */
+.resumeMainBlock {
+    width: 85%;
+    border-left: var(--borderColor);
+    border-style: solid;
+    padding: 1rem;
+}
+
+.resumeMainBlock ul {
+    padding: 1rem;
+}
+
+.resumeMainBlock li h3 {
+    font-size: 2.5rem;
+}
+
+.resumeMainBlock li ul li {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.education , .certifications{
+    list-style: inside ;
+}
+.resumeMainBlock li ul p{
+    font-size: 1.7rem;
+    padding: 1rem;
+}
+
+/* Contact Me Css */
+#contactMe ul{
+    width: 85%;
+    border-left: var(--borderColor);
+    border-style: solid;
+    padding: 1rem;
+}
+
+#contactMe ul li {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+
+/* Footer CSS */
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--fontColor)
+}
+
+.resList {
+    font-size: 3rem;
+    border-bottom: .1rem;
+    border-color: -var(--borderColor);
+    border-style: solid;
+}
+.backgroundRes{
+    display: none;
+}
+
+.resource {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+}
+
+.resource:hover .backgroundRes {
+    display: block;
+    color: white;
+}
+
+/* Quote Scroll */
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height:300px;
+  }
+  
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .dot-container {
+      text-align: center;
+      padding: 20px;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  q, .author {
+      font-style: italic;
+      font-size: 3rem;
+      color: var(--fontColor)
+  }
+
+  @media screen and (max-width: 992px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+      nav ul li {
+          width: 75vw;
+      }
+  }
+
+  @media screen and (max-width: 782px){
+      /* Header adjustments */
+        header {
+            align-items: center;
+            position: relative;
+            flex-direction: column-reverse;
+            right: 0 ;
+        }
+
+        header h1 {
+            position: relative;
+            bottom: 0;
+            left:0;
+            
+            font-size: 3rem;
+        }
+
+        header figure {
+            top: 0;
+            position: relative;
+            left: 10px;
+        }
+/* Resive my picture */
+        .myPic {
+            height: 100px;
+            width: auto;
+            padding-bottom: 1rem;
+        }
+/* About Me section */
+        #aboutMe {
+            flex-direction: column;
+        }
+
+        #aboutMe h2 {
+            padding-bottom: 1rem;
+        }
+        #aboutMe p{
+            border-left: none;
+            border-top: solid;
+        }
+
+ /* My Portfolio Section */
+        #myPortfolio {
+            flex-direction: column;
+        }
+
+        #myPortfolio h2{
+            padding-bottom: 1rem;
+        }
+
+        #myPortfolio figure {
+            border-left: none;
+            border-top: solid;
+            justify-content: center;
+            align-items: center;
+        }
+
+    /* My Resume Section     */
+        #myResume {
+            flex-direction: column;
+        }
+
+        #myResume h2 {
+            padding-bottom: 1rem;
+        }
+
+        #myResume ul {
+            border-left: none;
+            border-top: solid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .resumeMainBlock li h3 {
+            padding-bottom: 1.5rem;
+            padding-bottom: 1rem;
+        }
+
+        /* Contact Me Section */
+        #contactMe {
+            flex-direction: column;
+        }
+
+        #contactMe h2 {
+            padding-bottom: 1rem;
+        }
+
+        #contactMe ul {
+            border-left: none;
+            border-top: solid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slideshow-container{
+            height: 400px;
+        }
+  }
+
+  @media screen and (max-width: 440px){
+      .slideshow-container{
+          height: 450px;
+      }
+  }
+
+  @media screen and (max-width: 370px){
+    .slideshow-container{
+        height: 560px;
+    }
+}
+
