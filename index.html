@@ -2,302 +2,411 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Inject CSS reset and My Css -->
-    <link rel="stylesheet" href="./Assets/reset.css" />
-    <link rel="stylesheet" href="./Assets/style.css" />
-    <title>Jared Ackley Portfolio</title>
-<!-- JS for quote slideshow after Nav Bar -->
-    <script>
-        // showSlides(slideIndex);
-        slideIndex = 1;
-        setTimeout(function(){
-            showSlides(1)
-        }, 100);
-
-        setInterval(function(){
-            slideIndex = (slideIndex+1)
-            showSlides(slideIndex)
-        },3000); 
-
-        function plusSlides(n) {
-          showSlides(n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if(n === slides.length+1){n=1}
-          for (i = 0; i < slides.length; i++) {
-              console.log(n);
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[n-1].style.display = "block";  
-          dots[n-1].className += " active";
-        }
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jared Ackley - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
-<!-- Header of page contains My Name and Pic of Me -->
-<body class="bg">
-    <header>
-        
-        <h1>Jared Ackley</h1>
 
-        <figure><img class="myPic" src="./Assets/images/mypicture.png" alt="Picture of Me"></figure>
-
+<body>
+    <!--  nav bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <a class="navbar-brand" href="#top">Jared Ackley</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#7C7B8E; font-size:28px;"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutMe">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#myPortfolio">My Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#myResume">My Resume</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contactMe">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <header class="min-vh-100 d-flex flex-column justify-content-center align-items-center top">
+        <div class="mainBanner ">
+            <h1 class="display-4 name">Jared Ackley</h1>
+            <figure class="headShot"><img class="myPic" src="./assets/images/mypicture.png" alt="Picture of Me"></figure>
+        </div>
+        <div class="typewriteContainer">
+            <h1>Hi! My name is Jared. Let me help you: </h1>
+            <h1 class="typewrite" data-period="2000" data-type='["Become More Visible","Gain a Creative Advantage","Give a Voice to Your Brand" ]'><span class="wrap"></span>            
+            </h1>
+        </div>
+        <div class="socialIcons row py-2 px-4">
+            <a href="https://www.linkedin.com/in/jared-ackley-438364124/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a>
+            <a href="https://www.facebook.com/jared.ackley.5" target="_blank"><i class="fab fa-facebook-square fa-4x"></i></a>
+            <a href="https://www.instagram.com/jrod3323/" target="_blank"><i class="fab fa-instagram-square fa-4x"></i></a>
+            <a href="https://github.com/jrod3323" target="_blank"><i class="fab fa-github-square fa-4x"></i></a>
+        </div>
+           
     </header>
-<!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li> <a class="navAnchor" href="#aboutMe">About Me</a></li>
-            <li> <a class="navAnchor" href="#myPortfolio">My Portfolio</a></li>
-            <li> <a class="navAnchor" href="#myResume">My Resume</a></li>
-            <li> <a class="navAnchor" href="#contactMe">Contact Me</a></li>
 
-        </ul>
-    </nav>
-<!-- Quote Slide Show -->
-    <section class="slideshow-container">
-          <div class="mySlides">
-            <q>"We have to continually be jumping off cliffs and developing our wings on the way down."</q>
-            <p class="author">- Kurt Vonnegut</p>
-          </div>
-          
-          <div class="mySlides">
-            <q>"Others have seen what is and asked why. I have seen what could be and asked why not."</q>
-            <p class="author">- Pablo Picasso</p>
-          </div>
-          
-          <div class="mySlides">
-            <q>"Imagination is everything. It is the preview of life's coming attractions."</q>
-            <p class="author">- Albert Einstein</p>
-          </div>
-
-          <div class="mySlides">
-            <q>"Creativity takes courage."</q>
-            <p class="author">Henry Matisse</p>
-          </div>
-
-          <div class="mySlides">
-            <q>"I never made one of my discoveries through the process of rational thinking."</q>
-            <p class="author">Albert Einstein</p>
-          </div>
-    </section>
-
-    <section class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-    </section>
 <!-- beginning of main section -->
     <main>
         <!-- About Me Section -->
-            <section id="aboutMe">
-                <h2>About Me</h2>
-                <p>
-                    I have been in the transplant industry since 2011. My career started at Indiana Donor Network (IDN) in 2011 as an Organ 
-                    Procurement Coordinator. During my time at IDN, I managed all aspects of the organ procurement process. I also served on 
-                    several committees and worked closely with the clinical manager to develop antibiotic and lung therapy protocols. In 2013 
-                    I accepted a position with Buckeye Transplant Services (BTS) as an import coordinator where I closely work with transplant 
-                    centers to evaluate organs and help facilitate the organ transplant process. As the company has grown, I have grown with it. 
-                    I was promoted in 2015 to a Lead Coordinator, from there I was promoted to Clinical Support Manager. 
-                    Buckeye Transplant is a unique company in healthcare and has given me a unique opportunity to learn many aspects of growing a 
-                    company. After my time as a Clinical Support Manager, I transitioned into a HR Compliance Manager role where I helped Buckeye 
-                    with the employee onboarding process and helped ensure compliance with all labor laws across all 50 states. While wearing many 
-                    hats at Buckeye Transplant I became interested in how technology could help streamline and standardize our many processes. To 
-                    help Buckeye Transplant grow, I transitioned into an IT Project Manager role to develop tools and applications to streamline 
-                    and standardized our processes company wide. I am a highly motivated employee skilled in Customer Service, Interpersonal 
-                    Skills, Management, Process Management, and Healthcare. 
-                </p>
+            <section id="aboutMe" class="row min-vh-100 justify-content-center align-items-center">
+                <div class="card w-75 min-vh-50 aboutMeCardContainer justify-content-center align-items-center">
+                    <div class="card-body my-2 aboutMeCard">
+                      <h5 class="card-title">About Me</h5>
+                      <p class="card-text overflow-auto">I have been in the transplant industry since 2011. My career started at Indiana Donor Network (IDN) in 2011 as an Organ 
+                        Procurement Coordinator. During my time at IDN, I managed all aspects of the organ procurement process. I also served on 
+                        several committees and worked closely with the clinical manager to develop antibiotic and lung therapy protocols. In 2013 
+                        I accepted a position with Buckeye Transplant Services (BTS) as an import coordinator where I closely work with transplant 
+                        centers to evaluate organs and help facilitate the organ transplant process. As the company has grown, I have grown with it. 
+                        I was promoted in 2015 to a Lead Coordinator, from there I was promoted to Clinical Support Manager. 
+                        Buckeye Transplant is a unique company in healthcare and has given me a unique opportunity to learn many aspects of growing a 
+                        company. After my time as a Clinical Support Manager, I transitioned into a HR Compliance Manager role where I helped Buckeye 
+                        with the employee onboarding process and helped ensure compliance with all labor laws across all 50 states. While wearing many 
+                        hats at Buckeye Transplant I became interested in how technology could help streamline and standardize our many processes. To 
+                        help Buckeye Transplant grow, I transitioned into an IT Project Manager role to develop tools and applications to streamline 
+                        and standardized our processes company wide. I am a highly motivated employee skilled in Customer Service, Interpersonal 
+                        Skills, Management, Process Management, and Healthcare. </p>
+                    </div>
+                    <!-- image slide show -->
+                    <div id="carouselExampleSlidesOnly" class="carousel slide w-25 my 2" data-ride="carousel" data-interval=3000>
+                      <div class="carousel-inner aboutMeSlides">
+                        <div class="carousel-item active">
+                          <img class="d-block mb-4 w-100" src="./assets/images/slide1.jpg" alt="First slide">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </section>
 
             <!-- My Portfolio section - links to completed projects -->
-            <section id="myPortfolio">
-                <h2>My Portfolio</h2>
-                <figure class="portfolioMainBlock">
-                    <a class="project" target="_blank" href="./pages/inprogress.html">
-                        <figure>
-                            <h3>Project 1</h3>
-                        </figure>
-                    </a>
 
-                    <a class="project" target="_blank" href="./pages/inprogress.html">
-                        <figure>
-                            <h3>Project 2</h3>
-                        </figure>
-                    </a>
 
-                    <a class="project" target="_blank" href="./pages/inprogress.html">
-                        <figure>
-                            <h3>Project 3</h3>
-                        </figure>
-                    </a>
+            <section id="myPortfolio" class="row min-vh-100 justify-content-center align-items-center row">
+              <div class="accordion1 w-75 my-5" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      My Portfolio
+                    </h2>
+                  </div>
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left portfolioButton" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Covid Travel Planner
+                      </button>
+                    </h2>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse align-items-center justify-content-center show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body portfolioCardBody">
+                      <a href="https://jrod3323.github.io/Covid_Travel_Planner/" target="_blank"><img src="./assets/images/Covid_Travel_Planner_Demo.gif" class=" w-75 center-block" alt="Covid Travel Planner Gif"></a>
+                      <p class="my-2">COVID has made it difficult to plan activities and excursions for those who choose to travel domestically within the US. Travelers don’t always have updated information about COVID prevalence, nor can they predict which activities are available to partake in while traveling to the state of their choice. Our website, does both of these things. If a user decides to choose Colorado, for example, our COVID Travel Planner will present the most up to date COVID data for that state, and then will suggest national parks in which we believe domestic travelers can feel safe outdoors while following suggested CDC guidelines for traveling during the pandemic. </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left portfolioButton" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Day Planner
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body portfolioCardBody">
+                      <a href="https://jrod3323.github.io/Homework_5_Day_Planner/" target="_blank"><img src="./assets/images/hw5gif.gif" class="w-75 center-block" alt="Day Planner Gif"></a>
+                      <p class="my-2">This project is a Daily Planner. The tool is designed to provide the user with a means of scheduling their day.
 
-                    <a class="project" target="_blank" href="./pages/inprogress.html">
-                        <figure>
-                            <h3>Project 4</h3>
-                        </figure>
-                    </a>
+                        On the table, hours that have already past will be shown as grey.  The current active hour is shown as red, and future hours are populated as green.
+                        
+                        A user will input their plans for each hour in the text area provided.  After inputting the data, they will click save to save the data to local storage.  This allows data to persist on reload of the page.  
+                        
+                        At the end of the day or beginning of a new day, the user can click the Clear Schedule button at the bottom to clear the Scheduler.
+                        
+                        Of note, the scheduler will auto update the time every 60 seconds and it will also refresh the Scheduler every 60 seconds to ensure that each hour row is populated with the correct color if the scheduler is left open.</p>
 
-                    <a class="project" target="_blank" href="./pages/inprogress.html">
-                        <figure>
-                            <h3>Project 5</h3>
-                        </figure>
-                    </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left portfolioButton" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Weather Dashboard
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body portfolioCardBody">
+                      <a href="https://jrod3323.github.io/Homework_6_Weather_Dashboard/" target="_blank"><img src="./assets/images/hw6weatherdashboard.gif" class="w-75 center-block" alt="Weather Dashboard Gif"></a>
+                      <p class="my-2">This project is a Weather Dashborad. The tool is designed to provide the user with a means of reviewing the current weather as well as a 5 day forecast for the City of a User's choice.
 
-                    <a class="project" target="_blank" href="./pages/inprogress.html">
-                        <figure>
-                            <h3>Project 6</h3>
-                        </figure>
-                    </a>
-
-                </figure>  
+                        A user will use the search fields in the aside to search for a City based on that Cities Name and Full State name.  
+                        
+                        In the main data area, there is a jumbotron showing the searched for City and State as well as the date.  The current weather icon, temperature, wind speed and UV index will also be displayed.  The UV index will also be color coded based on a low, medium, or high index value.  
+                        
+                        Below the main data area, the user will see a 5 day forecast for the given City that shows the date, weather icon, temperature and humidity for those days.  
+                        
+                        Also, in the aside, there will be a list of most recent city searches.  This will populate up to 10 of the most recent searches from local storage.  If the user clicks one of these recent searches, the weather info for the City will be displayed. 
+                        
+                        Also of note, on open, the user will be prompted with their most recent search.  If there are no recent searches in local storage, the user will see a jumbotron with the message " Please Choose A City To Display ".</p>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
 
-            <!-- My Resume Section - Goes Through work experience , education and certifications -->
-            <section id="myResume">
-                <h2>My Resume</h2>
-                <ul class="resumeMainBlock">
-                    <li>
-                       <h3> Work Experience</h3>
-                        <ul>
-                            <li>Buckeye Transplant Services - IT Project Manager</li>
-                            <li>Full Time Oct 2019 - Present</li>
-                            <p>
-                                Develops IT tools as directed by HR Compliance Officer to aid all departments with process standardization and 
-                                automation. Review processes from all divisions of company and create tools and programs to automate and 
-                                streamline processes to improve overall work-flow. Develop and maintain company wide IT policies. Collaborate with 
-                                Buckeye Transplant application manager for all changes and updates to program. Maintains all currently developed 
-                                tools to ensure everything is in working order and maintained. Available to all Buckeye coordinators to help and 
-                                troubleshoot with any IT issues. Continually develops programming and development skills with the use of online 
-                                education.
-                            </p>
-                        </ul>
-
-                        <ul>
-                            <li>Buckeye Transplant Services - Human Resources Compliance Manager</li>
-                            <li>Jan 2019 – Nov 2019</li>
-                            <p>
-                                Maintained an internet presence to help Buckeye Transplant recruit highly qualified individuals. Worked with the 
-                                clinical staff to assess and fill needs. Help HR Director execute new hire’s initial employment paperwork. 
-                                (i.e Employee Handbook, Arbitration Agreement, Non-Solicitation Agreement, Non-Disclosure Agreement, Device 
-                                Management Agreement, I-9 and W-4 Federal Tax Forms). Developed and maintained accurate HR records for each 
-                                Buckeye employee. (i.e background checks, drug screens, employee federal tax documents, and initial HIPAA training 
-                                certifications). Developed and completed initial on boarding training process. Requested and maintained all access 
-                                for employees with all of our transplant partners. Ensured that Buckeye Transplant stayed compliant with all state 
-                                and federal regulations. With a focus on continual company improvements.
-                            </p>
-                        </ul>
-
-                        <ul>
-                            <li>Buckeye Transplant Services - Clinical Support Manager</li>
-                            <li>Oct 2017 – Jan 2019</li>
-                            <p>
-                                Demonstrated a comprehensive knowledge of UNOS Policy regarding organ evaluation, allocation, and surgical 
-                                recovery and critical care management of the brain dead organ donor. Maintained the highest standards of 
-                                professionalism, integrity and ethics modeling a standard of civility and excellence. Updated transplant center 
-                                flow processes, DALS, contacts with any changes asap and ensured all coordinators on the contract and the Clinical 
-                                Resource Manager were updated on all modifications in real time. Provided coordinator evaluations. Collaborated 
-                                with Quality manager to ensure compliance, assess competency, address deficits and develop processes to proactively 
-                                prevent errors. Effectively lead and supervised coordinators to achieve set targets. Provided positive leadership 
-                                to motivate professional growth and development of coordinators.
-                            </p>
-                        </ul>
-
-                        <ul>
-                            <li>Buckeye Transplant Services - Lead Coordinator</li>
-                            <li>Oct 2015 – Oct 2017</li>
-                            <p>
-                                Demonstrated a comprehensive knowledge of UNOS Policy regarding organ evaluation, allocation, and surgical 
-                                recovery and critical care management of the brain dead organ donor. Maintained the highest standards of 
-                                professionalism, integrity and ethics modeling a standard of civility and excellence. Updated transplant center 
-                                flow processes, DALS, contacts with any changes asap and ensured all coordinators on the contract. Helped train 
-                                new coordinators to current processes.
-                            </p>
-                        </ul>
-
-                        <ul>
-                            <li>Buckeye Transplant Services - Import Transplant Coordinator</li>
-                            <li>Jul 2013 – Oct 2015</li>
-                        </ul>
-
-                        <ul>
-                            <li>Indiana Donor Network - Procurement Transplant Coordinator</li>
-                            <li>Aug 2011 – June 2013</li>
-                        </ul>
-
-                    </li>
-
-                    <li>
-                        <h3>Certifictions</h3>
+   <!-- My Resume Section - Goes Through work experience , education and certifications -->
+  
+            <section id="myResume" class="row min-vh-100 d-flex flex-column justify-content-center align-items-center">
+              <h1 class="my-5 resumeBanner"> My Resume </h1>
+              <!-- Buttons for expanding each portfolio section -->
+              
+                <p class="w-75 h-75 align-items-center justify-content-around">
+                  <button id="resumeWorkExperience" class="btn btn-primary resumeButton my-2" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" >
+                    Work Experience
+                  </button>
+                  <button id= "resumeCertifications" class="btn btn-primary resumeButton my-2" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2" >
+                    Certifications
+                  </button>
+                  <button id="resumeEducation" class="btn btn-primary resumeButton my-2" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3" >
+                    Education
+                  </button>
+                </p>
+            
+              <!-- Work Experience Accordion -->
+              <div class="collapse w-75 show mb-5 resumeWorkExperienceInfo" id="collapseExample">
+                <div class="accordion2" id="accordionExample2">
+                  <div class="card">
+                    <div class="card-header" id="headingOne2">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                          Buckeye Transplant Services - IT Project Manager
+                        </button>
+                      </h2>
+                    </div>
+                
+                    <div id="collapseOne2" class="collapse show" aria-labelledby="headingOne2" data-parent="#accordionExample2">
+                      <div class="card-body">
+                          <h3>Full Time Oct 2019 - Present</h3>
+                          <p>
+                              Develops IT tools as directed by HR Compliance Officer to aid all departments with process standardization and 
+                              automation. Review processes from all divisions of company and create tools and programs to automate and 
+                              streamline processes to improve overall work-flow. Develop and maintain company wide IT policies. Collaborate with 
+                              Buckeye Transplant application manager for all changes and updates to program. Maintains all currently developed 
+                              tools to ensure everything is in working order and maintained. Available to all Buckeye coordinators to help and 
+                              troubleshoot with any IT issues. Continually develops programming and development skills with the use of online 
+                              education.
+                          </p>
+                      </ul>                      
+                    </div>
+                  </div>
+                 </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo2">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                          Buckeye Transplant Services - Human Resources Compliance Manager
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        <h3>Jan 2019 – Nov 2019</h3>
+                        <p>
+                            Maintained an internet presence to help Buckeye Transplant recruit highly qualified individuals. Worked with the 
+                            clinical staff to assess and fill needs. Help HR Director execute new hire’s initial employment paperwork. 
+                            (i.e Employee Handbook, Arbitration Agreement, Non-Solicitation Agreement, Non-Disclosure Agreement, Device 
+                            Management Agreement, I-9 and W-4 Federal Tax Forms). Developed and maintained accurate HR records for each 
+                            Buckeye employee. (i.e background checks, drug screens, employee federal tax documents, and initial HIPAA training 
+                            certifications). Developed and completed initial on boarding training process. Requested and maintained all access 
+                            for employees with all of our transplant partners. Ensured that Buckeye Transplant stayed compliant with all state 
+                            and federal regulations. With a focus on continual company improvements.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingThree2">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                          Buckeye Transplant Services - Clinical Support Manager
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        <h3>Oct 2017 – Jan 2019</h3>
+                        <p>
+                            Demonstrated a comprehensive knowledge of UNOS Policy regarding organ evaluation, allocation, and surgical 
+                            recovery and critical care management of the brain dead organ donor. Maintained the highest standards of 
+                            professionalism, integrity and ethics modeling a standard of civility and excellence. Updated transplant center 
+                            flow processes, DALS, contacts with any changes asap and ensured all coordinators on the contract and the Clinical 
+                            Resource Manager were updated on all modifications in real time. Provided coordinator evaluations. Collaborated 
+                            with Quality manager to ensure compliance, assess competency, address deficits and develop processes to proactively 
+                            prevent errors. Effectively lead and supervised coordinators to achieve set targets. Provided positive leadership 
+                            to motivate professional growth and development of coordinators.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingFour2">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour2" aria-expanded="false" aria-controls="collapseFour2">
+                          Buckeye Transplant Services - Lead Coordinator
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFour2" class="collapse" aria-labelledby="headingFour2" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        <h3>Oct 2015 – Oct 2017</h3>
+                        <p>
+                            Demonstrated a comprehensive knowledge of UNOS Policy regarding organ evaluation, allocation, and surgical 
+                            recovery and critical care management of the brain dead organ donor. Maintained the highest standards of 
+                            professionalism, integrity and ethics modeling a standard of civility and excellence. Updated transplant center 
+                            flow processes, DALS, contacts with any changes asap and ensured all coordinators on the contract. Helped train 
+                            new coordinators to current processes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingFive2">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive2" aria-expanded="false" aria-controls="collapseFive2">
+                          Buckeye Transplant Services - Import Transplant Coordinator
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFive2" class="collapse" aria-labelledby="headingFive2" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        <h3>Jul 2013 – Oct 2015</h3>
+                        <p>Demonstrated a comprehensive knowledge of UNOS Policy regarding organ evaluation, allocation, and surgical recovery and critical care management of the brain dead organ donor. Maintained the highest standards of professionalism, integrity and ethics modeling a standard of civility and excellence. 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingSix2">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix2" aria-expanded="false" aria-controls="collapseSix2">
+                          Indiana Donor Network - Procurement Transplant Coordinator
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseSix2" class="collapse" aria-labelledby="headingSix2" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        <h3>Aug 2011 – June 2013</h3>
+                        <p>Demonstrated a comprehensive knowledge of UNOS Policy regarding organ evaluation, allocation, and surgical recovery and critical care management of the brain dead organ donor. Maintained the highest standards of professionalism, integrity and ethics modeling a standard of civility and excellence.
+                          Treated donor patient's at the bedside given standardized clinical guidelines.  Allocated organs to the national waitlist and facilitated any transportation needs for both local and incoming transplant centers. 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Certifications Accordion -->
+              <div class="collapse w-75 resumeCertificationsInfo mb-5" id="collapseExample2">
+                <div class="accordion3" id="accordionExample2">
+                  <div class="card">
+                    <div class="card-header" id="headingOne3">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
+                          Certifications
+                        </button>
+                      </h2>
+                    </div>
+                
+                    <div id="collapseOne3" class="collapse" aria-labelledby="headingOne3" data-parent="#accordionExample2">
+                      <div class="card-body">
                         <ul class="certifications">
-                            <li> <a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/5LS678FNQXSP"> University of Michigan - Introduction to Structured Query Language - Issued May 2020</a></li>
-                            <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/QQZFUQ88GQUN"> University of Michigan - Building Web Applications in PHP - Issued April 2020</a></li>
-                            <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/89W6U3XQPLN5"> Google - Gsuite Administration Specialization - Issued Feb 2020</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <h3>Education</h3>
-                        <ul class="education">
+                          <li> <a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/5LS678FNQXSP"> University of Michigan - Introduction to Structured Query Language - Issued May 2020</a></li>
+                          <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/QQZFUQ88GQUN"> University of Michigan - Building Web Applications in PHP - Issued April 2020</a></li>
+                          <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/specialization/89W6U3XQPLN5"> Google - Gsuite Administration Specialization - Issued Feb 2020</a></li>
+                      </ul>                      
+                    </div>
+                  </div>
+                 </div>
+                </div>
+                </div>
+                 <!-- Education Accordion -->
+                 <div class="collapse w-75 resumeEducationInfo mb-5" id="collapseExample3">
+                  <div class="accordion4" id="accordionExample3">
+                    <div class="card">
+                      <div class="card-header" id="headingOne4">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+                            Education
+                          </button>
+                        </h2>
+                      </div>
+                  
+                      <div id="collapseOne4" class="collapse" aria-labelledby="headingOne4" data-parent="#accordionExample3">
+                        <div class="card-body">
+                          <ul class="education">
                             <li>University of Texas at Austin - Full Stack Web Development Coding Bootcamp - 2020-2021</li>
                             <li>University of Toledo - Master of Biomedical Sciences, Human Donation Science - 2010-2011</li>
                             <li>University of Toledo - Bachelor of Science, Pharmaceutical Sciences - 2005-2010</li>
-                        </ul>
-                    </li>
-                </ul>
+                        </ul>                      
+                      </div>
+                    </div>
+                   </div>
+                  </div>
+                </div>
+                <h1><a href="./assets/images/Jared-Ackley.pdf" download><i class="fas fa-file-download fa-lg m-2"></i></a><a href="./pages/Resume.html" target="_blank"><i class="fas fa-file-pdf fa-lg m-2"></i></a></h1>
             </section>
 
             <!-- My Contact Section -->
-            <section id="contactMe">
-                <h2>Contact Me</h2>
-                <ul>
-                    <li>Email: jrod3323@gmail.com </li>
-                    <li>Contact: 419-584-6006</li>
-                    <li><a target="_blank" href="https://www.linkedin.com/in/jared-ackley-438364124/">LinkedIn</a></li>
-                </ul>
-            </section>
-
+            <section id="contactMe" class="row min-vh-100 justify-content-center align-items-center">
+              <div class="card w-75 min-vh-50 contactMeCardContainer justify-content-center align-items-center my-5">
+                <div class="card-body my-5 contactMeCard w-50">
+                  <h1 class="card-title">Lets Talk About Your Goals</h5>
+                  <form action="https://formspree.io/f/xoqpnglg" method="POST" class="d-flex flex-column">
+                    <label class="d-flex flex-column">
+                      Your Name:
+                      <input type="text" name="name" >
+                    </label>
+                    <label class="d-flex flex-column">
+                    Your email Address:
+                      <input type="text" name="_replyto">
+                    </label>
+                    <label class="d-flex flex-column">
+                      How Can I Help You:
+                      <textarea rows="4" name="message" ></textarea>
+                    </label>
+                    <div class="justify-content-center align-items-center">
+                      <button type="submit" class="btn btn-primary btn-lg formSubmit">Send</button>
+                    </div> 
+                </form>
+                <div class="my-3">
+                  <h3 class="contact">Or Contact Me Directly</h3>
+                  <h5 class= "contactInfo">Email: jrod3323@gmail.com</h5>
+                  <h5 class= "contactInfo">Phone: 512-817-3516</h5>
+                </div>
+              
+                </div>
+              </div>
     </main>
 
-    <!-- Bottom Nav Bar -->
-    <nav>
-        <ul>
-            <li> <a class="navAnchor" href="#aboutMe">About Me</a></li>
-            <li> <a class="navAnchor" href="#myPortfolio">My Portfolio</a></li>
-            <li> <a class="navAnchor" href="#myResume">My Resume</a></li>
-            <li> <a class="navAnchor" href="#contactMe">Contact Me</a></li>
-
-        </ul>
-    </nav>
-
-    <!-- Fooder which includes links to image resources -->
-    <footer>
-
-        <p class="resList">
-            Outside Image Resources
-            <ul>
-                <li class="resource">Background<span class="backgroundRes"><a target="_blank" href="https://hipwallpaper.com/night-sky-backgrounds-hd/">Click Here for the Original Image</a></span></li> 
-                <li class="resource">In Progress Project Cogs<span class="backgroundRes"><a target="_blank" href="https://giphy.com/gifs/static-cogs-stempunk-26tPp6Np4SW7NVJuw">Click Here for the Original Image</a></span></li> 
-                <li class="resource">In Progress Page Minions<span class="backgroundRes"><a target="_blank" href="https://tenor.com/view/minions-gif-3533584">Click Here for the Original Image</a></span></li> 
-
-
-            </ul>
-        </p>
-
-    </footer>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="./assets/script.js"></script>
+    <script src="https://kit.fontawesome.com/f8efcead5d.js" crossorigin="anonymous"></script>
 </body>
 </html>
