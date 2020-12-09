@@ -12,8 +12,8 @@ This is a portfolio webpage that has the purpose of showcasing my skills and tal
 
 ## Screenshot
 
-![Front Page Gif](./assets/images/Udpdated_Portfolio.gif)
+![Front Page Gif](./Assets/images/Udpdated_Portfolio.gif)
 
 ## Link
 
-[Click Here](https://jrod3323.github.io/Homework_7_Update_Portfolio/) to navigate to my live portfolio page.
+[Click Here](https://jrod3323.github.io/) to navigate to my live portfolio page.
