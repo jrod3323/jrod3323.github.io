@@ -25,39 +25,39 @@ function dynamicSlideShow(){
 
     let images = [
         {
-            url:"./assets/images/slide2.jpg" ,
+            url:"./Assets/images/slide2.jpg" ,
             alt: "Family at UT",
         },
         {
-            url:"./assets/images/slide3.jpg" ,
+            url:"./Assets/images/slide3.jpg" ,
             alt: "In NOLA",
         },
         {
-            url:"./assets/images/slide4.jpg" ,
+            url:"./Assets/images/slide4.jpg" ,
             alt: "At Lake Travis",
         },
         {
-            url:"./assets/images/slide5.jpg" ,
+            url:"./Assets/images/slide5.jpg" ,
             alt: "With Brother",
         },
         {
-            url:"./assets/images/slide6.jpg" ,
+            url:"./Assets/images/slide6.jpg" ,
             alt: "With Dad and Nephews",
         },
         {
-            url:"./assets/images/slide7.jpg" ,
+            url:"./Assets/images/slide7.jpg" ,
             alt: "My Puppies",
         },
         {
-            url:"./assets/images/slide8.jpg" ,
+            url:"./Assets/images/slide8.jpg" ,
             alt: "With Wife at Lake Travis",
         },
         {
-            url:"./assets/images/slide9.jpg" ,
+            url:"./Assets/images/slide9.jpg" ,
             alt: "With Family in Detroit",
         },
         {
-            url:"./assets/images/slide10.jpg" ,
+            url:"./Assets/images/slide10.jpg" ,
             alt: "At Big Bend National Park",
         }
     ]
