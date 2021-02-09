@@ -1,5 +1,7 @@
 /* Standardized Document CSS */
-
+html {
+    scroll-behavior: smooth;
+  }
 
 
 /* Header Section */
